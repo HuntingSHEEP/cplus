@@ -3,41 +3,6 @@
 #include<iomanip>
 using namespace std;
 
-void CC(){
-  int *a = (int*) malloc(sizeof(int));
-  cout<<"WYPISANIE WSKAŹNIKA"<<endl;
-  printf("%p\n", a);
-  cout<<a<<endl;
-
-  cout<<"\nWYPISANIE ZAWARTOŚCI WSKAŹNIKA"<<endl;
-  printf("%d\n", *a);
-  cout<<*a<<endl;
-
-  double d = 2.451;
-  cout<<"\nWYPISANIE DOUBLE"<<endl;
-  printf("%lf\n", d);
-  cout<<d<<endl;
-
-  int dd;
-  cout<<"POBRANIE ZMIENNEJ INT"<<endl;
-  scanf(" %d", &dd);
-  cout<<"dd: "<<dd<<endl;
-  cin>> dd;
-  cout<<"dd: "<<dd<<endl;
-
-
-  double z;
-  cout<<"POBRANIE ZMIENNEJ DOUBLE"<<endl;
-  scanf(" %lf", &z);
-  cout<<"z: "<<z<<endl;
-  cin>> z ;
-  cout<<"z: "<<z<<endl;
-
-
-
-
-
-}
 
 void zadanie(){
   double r = 3.14156351;
@@ -73,10 +38,33 @@ void zadanie(){
 
 }
 
+void output(){
+  cout<<"\n========================"<<endl;
+
+  int a = 3;
+  double d = 3.1415;
+
+  double wynik = a*d;
+
+
+  cout<<"Wynik naszego działania: "<<setprecision(6)<<wynik<<" jest niepoprawny ale:"<<endl;
+  wynik *= 2;
+  cout<<"output:"<<setw(10)<<setprecision(6)<<wynik<<setw(7)<<"T:"<<setw(10)<<wynik<<endl;
+  wynik *= 3;
+  cout<<"output1:"<<setw(9)<<setprecision(4)<<wynik<<setw(7)<<"T:"<<setw(10)<<wynik<<endl;
+  wynik *= 2;
+  cout<<"output2:"<<setw(9)<<setprecision(4)<<wynik<<setw(7)<<"T:"<<setw(10)<<wynik<<endl;
+  wynik /= 2.3;
+  cout<<"output2:"<<setw(9)<<setprecision(4)<<wynik<<setw(7)<<"T:"<<setw(10)<<wynik<<endl;
+
+
+  cout<<"\n========================"<<endl;
+}
 
 int main(){
 
-  CC();
+  //zadanie();
+  output();
 
   return 0;
 }
