@@ -17,6 +17,20 @@ void fun2(int a){
   cout<< ((a%2 == 0) ? "Parzysta" : "Nieparzysta") <<endl;
 }
 
+void bitowo(int q){
+  unsigned char a = q, b = 1;
+
+    // The result is 00000001
+    printf("a = %d, b = %d\n", a, b);
+
+    if((a&b) == 0)
+      cout<<"Parzyste"<<endl;
+    else if((a&b) == 1)
+      cout<<"Nieparzyste"<<endl;
+
+
+}
+
 int main(){
 
   int a;
@@ -24,7 +38,7 @@ int main(){
   scanf(" %d", &a);
 
   int f;
-  cout<<"wybierz funkcję [0|1]"<<endl;
+  cout<<"wybierz funkcję [0|1|2]"<<endl;
   scanf(" %d", &f);
 
   switch (f){
@@ -33,6 +47,9 @@ int main(){
       break;
     case 1:
       fun2(a);
+      break;
+    case 2:
+      bitowo(a);
   }
 
 
