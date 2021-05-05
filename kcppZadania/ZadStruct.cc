@@ -16,6 +16,8 @@ int main(){
   szafa regal = {"wisząca", "sosna", 200, 60};
 
   cout<<regal.rodzaj<<endl;
+  regal.rodzaj = "stojąca";
+  cout<<regal.rodzaj<<endl;
 
   return 0;
 }
